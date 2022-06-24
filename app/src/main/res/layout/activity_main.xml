@@ -7,6 +7,7 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
     <TextView
+        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="250dp"
         android:padding="10dp"
@@ -69,7 +70,7 @@
             android:textSize="15sp"
             android:layout_margin="2dp"
             android:backgroundTint="@color/Gray2"
-            android:onClick="onDigit"
+            android:onClick="onOperator"
             tools:ignore="UsingOnClickInXml"
             />
         ></LinearLayout>
@@ -127,7 +128,7 @@
             android:textSize="15sp"
             android:layout_margin="2dp"
             android:backgroundTint="@color/Gray2"
-            android:onClick="onDigit"
+            android:onClick="onOperator"
             tools:ignore="UsingOnClickInXml"
             />
         ></LinearLayout>
@@ -186,7 +187,7 @@
             android:textSize="15sp"
             android:layout_margin="2dp"
             android:backgroundTint="@color/Gray2"
-            android:onClick="onDigit"
+            android:onClick="onOperator"
             tools:ignore="UsingOnClickInXml"
             />
         ></LinearLayout>
@@ -196,12 +197,26 @@
         android:orientation="horizontal"
         android:layout_weight="1"
         >
+        <Button
+            android:id="@+id/decimalPicker"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/decimal"
+            android:textColor="@color/Gray"
+            android:textSize="15sp"
+            android:layout_margin="2dp"
+            android:backgroundTint="@color/Gray2"
+            android:onClick="onDecimal"
+            tools:ignore="NestedWeights,OnClick,UsingOnClickInXml"
+            />
+
 
         <Button
             android:id="@+id/btn0Picker"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="2"
+            android:layout_weight="1"
             android:text="@string/_0"
             android:textColor="@color/Gray"
             android:textSize="15sp"
@@ -211,6 +226,7 @@
             tools:ignore="NestedWeights,UsingOnClickInXml"
             />
         <Button
+
             android:id="@+id/btnCLRPicker"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -220,8 +236,8 @@
             android:textSize="15sp"
             android:layout_margin="2dp"
             android:backgroundTint="@color/Gray2"
-            android:onClick="onDigit"
-            tools:ignore="UsingOnClickInXml"
+            android:onClick="onClear"
+            tools:ignore="OnClick,UsingOnClickInXml"
             />
         <Button
             android:id="@+id/btnADDPicker"
@@ -233,7 +249,7 @@
             android:textSize="15sp"
             android:layout_margin="2dp"
             android:backgroundTint="@color/Gray2"
-            android:onClick="onDigit"
+            android:onClick="onOperator"
             tools:ignore="UsingOnClickInXml"
             />
 
@@ -255,8 +271,8 @@
             android:textSize="15sp"
             android:layout_margin="2dp"
             android:backgroundTint="@color/Gray2"
-            android:onClick="onDigit"
-            tools:ignore="NestedWeights,UsingOnClickInXml"
+            android:onClick="onAnswer"
+            tools:ignore="NestedWeights,OnClick,UsingOnClickInXml"
             />
         ></LinearLayout>
 

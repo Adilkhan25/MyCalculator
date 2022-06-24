@@ -17,4 +17,5 @@
     <string name="clr">CLR</string>
     <string name="add">+</string>
     <string name="result">=</string>
+    <string name="decimal">.</string>
 </resources>
